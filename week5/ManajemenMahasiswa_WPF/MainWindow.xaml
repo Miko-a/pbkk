@@ -1,0 +1,63 @@
+﻿<Window x:Class="ManajemenMahasiswa_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manajemen Mahasiswa" Height="620" Width="960"
+        MinHeight="560" MinWidth="850">
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="420" />
+            <ColumnDefinition Width="24" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="STUDENT REGISTRATION" FontSize="20" FontWeight="Bold" FontFamily="Verdana" Margin="0,0,0,14" />
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Nama:" />
+                    <TextBox x:Name="Nama" Height="28" Margin="0,4,0,10" />
+                    <TextBlock Text="NRP:" />
+                    <TextBox x:Name="NRP" Height="28" Margin="0,4,0,10" />
+                    <TextBlock Text="Jurusan:" />
+                    <TextBox x:Name="Jurusan" Height="28" Margin="0,4,0,10" />
+                    <TextBlock Text="Jenis Kelamin:" />
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,10">
+                        <RadioButton x:Name="LakiLakiRadio" Content="Laki-laki" GroupName="Gender" Margin="0,0,20,0" />
+                        <RadioButton x:Name="PerempuanRadio" Content="Perempuan" GroupName="Gender" />
+                    </StackPanel>
+                    <TextBlock Text="Tanggal Lahir:" />
+                    <DatePicker x:Name="TanggalLahir" Height="28" Margin="0,4,0,10" />
+                    <TextBlock Text="Alamat:" />
+                    <TextBox x:Name="Alamat" Height="60" Margin="0,4,0,10" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+                    <TextBlock Text="No. Telp:" />
+                    <TextBox x:Name="NoTelp" Height="28" Margin="0,4,0,10" />
+                </StackPanel>
+            </ScrollViewer>
+            <WrapPanel Grid.Row="2" HorizontalAlignment="Left" Margin="0,12,0,0">
+                <Button Content="Save" Width="75" Height="32" Margin="0,0,8,0" Background="#FF0061FF" Foreground="White" FontWeight="Bold" Click="Save_Click" />
+                <Button Content="Update" Width="75" Height="32" Margin="0,0,8,0" Background="#FF8C9AB0" Foreground="White" FontWeight="Bold" Click="Update_Click" />
+                <Button Content="Reset" Width="75" Height="32" Margin="0,0,8,0" Background="#FF4F4F4F" Foreground="White" FontWeight="Bold" Click="Reset_Click" />
+                <Button Content="Hapus" Width="75" Height="32" Background="Red" Foreground="White" FontWeight="Bold" Click="Delete_Click" />
+            </WrapPanel>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Data Mahasiswa" FontSize="20" FontWeight="Bold" FontFamily="Verdana" Margin="0,0,0,14" />
+            <StackPanel Grid.Row="1" Margin="0,0,0,10">
+                <TextBlock Text="Ketik untuk mencari:" />
+                <TextBox x:Name="SearchBox" Height="28" Margin="0,4,0,0" TextChanged="SearchBox_TextChanged" />
+            </StackPanel>
+            <ListBox x:Name="StudentList" Grid.Row="2" SelectionChanged="StudentList_SelectionChanged" />
+        </Grid>
+    </Grid>
+</Window>
