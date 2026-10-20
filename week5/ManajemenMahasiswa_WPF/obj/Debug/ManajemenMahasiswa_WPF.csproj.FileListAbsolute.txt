@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.exe.config
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.exe
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.pdb
@@ -12,3 +13,19 @@ C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.csproj.CoreCompileInputs.cache
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.exe
 C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.pdb
+=======
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.exe.config
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.exe
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\bin\Debug\ManajemenMahasiswa_WPF.pdb
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.csproj.AssemblyReference.cache
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\App.g.cs
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF_MarkupCompile.cache
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\MainWindow.baml
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.g.resources
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.Properties.Resources.resources
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.csproj.GenerateResource.cache
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.csproj.CoreCompileInputs.cache
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.exe
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\ManajemenMahasiswa_WPF.pdb
+>>>>>>> 2b134ed7a34407cdd142eb28035034f817da9f85

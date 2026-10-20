@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿ManajemenMahasiswa_WPF
 
 
@@ -18,3 +19,25 @@ MainWindow.xaml;
 
 False
 
+=======
+﻿ManajemenMahasiswa_WPF
+
+
+winexe
+C#
+.cs
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\obj\Debug\
+ManajemenMahasiswa_WPF
+none
+false
+DEBUG;TRACE
+C:\Users\Mikoa\Documents\Kuliah\Semester 5\pbkk\week5\ManajemenMahasiswa_WPF\App.xaml
+1219584333
+
+51579654133
+13-1310406943
+MainWindow.xaml;
+
+False
+
+>>>>>>> 2b134ed7a34407cdd142eb28035034f817da9f85

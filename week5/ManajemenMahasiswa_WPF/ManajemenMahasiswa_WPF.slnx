@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 <Solution>
   <Project Path="ManajemenMahasiswa_WPF.csproj" Id="bf42eb47-a72c-47ab-aed3-caef89838e49" />
 </Solution>
+=======
+<Solution>
+  <Project Path="ManajemenMahasiswa_WPF.csproj" Id="bf42eb47-a72c-47ab-aed3-caef89838e49" />
+</Solution>
+>>>>>>> 2b134ed7a34407cdd142eb28035034f817da9f85

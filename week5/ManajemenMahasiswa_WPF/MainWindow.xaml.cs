@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -194,3 +195,201 @@ namespace ManajemenMahasiswa_WPF
         }
     }
 }
+=======
+﻿using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+
+namespace ManajemenMahasiswa_WPF
+{
+    public partial class MainWindow : Window
+    {
+        private readonly ObservableCollection<Student> _students = new ObservableCollection<Student>();
+        private readonly ICollectionView _studentsView;
+        private bool _suppressSelectionChanged;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            _studentsView = CollectionViewSource.GetDefaultView(_students);
+            _studentsView.Filter = FilterStudents;
+            StudentList.ItemsSource = _studentsView;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Student student;
+            if (!TryReadForm(out student))
+                return;
+
+            if (_students.Any(existing => string.Equals(existing.Nrp, student.Nrp, StringComparison.OrdinalIgnoreCase)))
+            {
+                MessageBox.Show("NRP sudah terdaftar.", "Validasi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NRP.Focus();
+                return;
+            }
+
+            _students.Add(student);
+            ResetForm();
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedStudent = StudentList.SelectedItem as Student;
+            if (selectedStudent == null)
+            {
+                MessageBox.Show("Pilih data mahasiswa yang akan diperbarui.", "Informasi", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            Student updatedStudent;
+            if (!TryReadForm(out updatedStudent))
+                return;
+
+            if (_students.Any(existing => existing != selectedStudent &&
+                                          string.Equals(existing.Nrp, updatedStudent.Nrp, StringComparison.OrdinalIgnoreCase)))
+            {
+                MessageBox.Show("NRP sudah digunakan oleh mahasiswa lain.", "Validasi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                NRP.Focus();
+                return;
+            }
+
+            selectedStudent.Nrp = updatedStudent.Nrp;
+            selectedStudent.Name = updatedStudent.Name;
+            selectedStudent.Major = updatedStudent.Major;
+            selectedStudent.Gender = updatedStudent.Gender;
+            selectedStudent.BirthDate = updatedStudent.BirthDate;
+            selectedStudent.Address = updatedStudent.Address;
+            selectedStudent.Phone = updatedStudent.Phone;
+            _studentsView.Refresh();
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            ResetForm();
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedStudent = StudentList.SelectedItem as Student;
+            if (selectedStudent == null)
+            {
+                MessageBox.Show("Pilih data mahasiswa yang akan dihapus.", "Informasi", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            var result = MessageBox.Show("Hapus data mahasiswa yang dipilih?", "Konfirmasi", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                _students.Remove(selectedStudent);
+                ResetForm();
+            }
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (_studentsView != null)
+                _studentsView.Refresh();
+        }
+
+        private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_suppressSelectionChanged)
+                return;
+
+            var student = StudentList.SelectedItem as Student;
+            if (student == null)
+                return;
+
+            Nama.Text = student.Name;
+            NRP.Text = student.Nrp;
+            Jurusan.Text = student.Major;
+            LakiLakiRadio.IsChecked = student.Gender == "Laki-laki";
+            PerempuanRadio.IsChecked = student.Gender == "Perempuan";
+            TanggalLahir.SelectedDate = student.BirthDate;
+            Alamat.Text = student.Address;
+            NoTelp.Text = student.Phone;
+        }
+
+        private bool TryReadForm(out Student student)
+        {
+            student = null;
+            var gender = LakiLakiRadio.IsChecked == true ? "Laki-laki" :
+                         PerempuanRadio.IsChecked == true ? "Perempuan" : null;
+
+            if (string.IsNullOrWhiteSpace(Nama.Text) ||
+                string.IsNullOrWhiteSpace(NRP.Text) ||
+                string.IsNullOrWhiteSpace(Jurusan.Text) ||
+                gender == null ||
+                !TanggalLahir.SelectedDate.HasValue ||
+                string.IsNullOrWhiteSpace(Alamat.Text) ||
+                string.IsNullOrWhiteSpace(NoTelp.Text))
+            {
+                MessageBox.Show("Lengkapi semua data mahasiswa sebelum menyimpan.", "Validasi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            student = new Student
+            {
+                Name = Nama.Text.Trim(),
+                Nrp = NRP.Text.Trim(),
+                Major = Jurusan.Text.Trim(),
+                Gender = gender,
+                BirthDate = TanggalLahir.SelectedDate.Value,
+                Address = Alamat.Text.Trim(),
+                Phone = NoTelp.Text.Trim()
+            };
+
+            return true;
+        }
+
+        private bool FilterStudents(object item)
+        {
+            var student = item as Student;
+            var searchText = SearchBox == null ? string.Empty : SearchBox.Text.Trim();
+            if (student == null || searchText.Length == 0)
+                return student != null;
+
+            return student.Nrp.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   student.Name.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   student.Major.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        private void ResetForm()
+        {
+            _suppressSelectionChanged = true;
+            StudentList.SelectedItem = null;
+            Nama.Clear();
+            NRP.Clear();
+            Jurusan.Clear();
+            LakiLakiRadio.IsChecked = false;
+            PerempuanRadio.IsChecked = false;
+            TanggalLahir.SelectedDate = null;
+            Alamat.Clear();
+            NoTelp.Clear();
+            _suppressSelectionChanged = false;
+            Nama.Focus();
+        }
+    }
+
+    public class Student
+    {
+        public string Nrp { get; set; }
+        public string Name { get; set; }
+        public string Major { get; set; }
+        public string Gender { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nrp} - {Name} ({Major})";
+        }
+    }
+}
+>>>>>>> 2b134ed7a34407cdd142eb28035034f817da9f85
