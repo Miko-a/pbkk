@@ -18,6 +18,9 @@ Fitur utama KasKita meliputi:
 
 Dengan fitur-fitur tersebut, KasKita diharapkan dapat membuat pengelolaan keuangan organisasi menjadi lebih terstruktur, mudah ditelusuri, dan transparan.
 
+Link Repository: https://github.com/Miko-a/KasKita
+Link Demo: https://youtu.be/mV4gYxfGaKI
+
 ## 2. Kontribusi Personal
 
 Pada bagian ini, kontribusi dijelaskan berdasarkan pekerjaan yang benar-benar dilakukan selama pengembangan aplikasi.
