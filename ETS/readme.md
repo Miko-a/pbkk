@@ -1,3 +1,53 @@
+Nama: Farrel Jatmiko Aji
+
+NRP: 5025241193
+
+# Pertanyaan ETS
+
+## 1. Jelaskan deskripsi dan ruang lingkup fitur aplikasi Desktop Rich UI yang dibuat.
+
+**KasKita** merupakan aplikasi desktop berbasis Windows yang dirancang untuk membantu pengelolaan keuangan organisasi mahasiswa secara digital, terstruktur, dan transparan. Aplikasi ini dikembangkan menggunakan bahasa pemrograman **C# dengan framework .NET 8 dan Windows Presentation Foundation (WPF)** untuk menghasilkan antarmuka Rich UI yang modern, interaktif, dan mudah digunakan. KasKita juga menggunakan SQLite sebagai basis data untuk menyimpan informasi keuangan organisasi.
+
+Ruang lingkup fitur aplikasi KasKita meliputi:
+
+1. **Login dan Manajemen Pengguna:** Mengatur akses aplikasi berdasarkan tiga peran, yaitu Bendahara, Ketua, dan Anggota.
+2. **Dashboard Keuangan:** Menampilkan informasi saldo kas, pemasukan, pengeluaran, tunggakan iuran, serta grafik perkembangan keuangan organisasi.
+3. **Manajemen Transaksi Kas:** Mencatat pemasukan dan pengeluaran, mengelompokkan kategori transaksi, serta mendukung proses persetujuan pengeluaran tertentu.
+4. **Pengelolaan Iuran Anggota:** Mencatat pembayaran iuran dan memantau status anggota yang sudah membayar maupun yang masih menunggak.
+5. **Manajemen Anggaran Kegiatan:** Mengatur rencana anggaran dan memantau realisasi pengeluaran untuk setiap kegiatan organisasi.
+6. **Laporan Keuangan:** Menyajikan rekapitulasi transaksi dan memungkinkan ekspor laporan ke format PDF maupun Excel.
+7. **Pengelolaan Data dan Backup:** Mengelola data anggota, periode kepengurusan, kategori transaksi, serta melakukan pencadangan dan pemulihan data.
+
+Dengan fitur-fitur tersebut, KasKita tidak hanya berfungsi sebagai aplikasi pencatatan keuangan, tetapi juga sebagai sistem informasi yang membantu pengurus organisasi dalam memantau, mengelola, dan mengevaluasi kondisi keuangan secara lebih efektif.
+
+## 2. Apa latar belakang dan Manfaat aplikasi tersebut di buat.
+
+**Latar Belakang**
+
+Aplikasi KasKita dibuat berdasarkan permasalahan pengelolaan keuangan yang sering terjadi pada organisasi mahasiswa. Pencatatan keuangan masih banyak dilakukan secara manual menggunakan buku kas, spreadsheet, atau pesan dalam grup komunikasi. Cara tersebut dapat menyebabkan data transaksi tidak terorganisasi, kesalahan pencatatan, kesulitan memantau pembayaran iuran anggota, serta kurangnya transparansi dalam penggunaan dana organisasi.
+
+Selain itu, pembuatan laporan keuangan secara manual membutuhkan waktu dan menyulitkan pengurus ketika melakukan evaluasi anggaran kegiatan. Oleh karena itu, dikembangkan aplikasi KasKita sebagai solusi digital yang dapat mengintegrasikan seluruh proses pengelolaan keuangan organisasi dalam satu sistem berbasis desktop.
+
+**Manfaat Aplikasi**
+
+1. **Meningkatkan efisiensi administrasi**, karena pencatatan transaksi dan pembuatan laporan dapat dilakukan secara lebih cepat dan terstruktur.
+2. **Meningkatkan transparansi dan akuntabilitas**, sehingga pemasukan dan pengeluaran organisasi dapat dipantau serta dipertanggungjawabkan.
+3. **Mempermudah pemantauan kas dan iuran**, melalui dashboard yang menampilkan kondisi keuangan dan status pembayaran anggota.
+4. **Mengurangi risiko kesalahan pencatatan**, karena data tersimpan secara terpusat dalam basis data.
+5. **Mendukung pengambilan keputusan**, dengan menyediakan laporan serta visualisasi data keuangan yang mudah dipahami.
+6. **Mempermudah pengelolaan anggaran kegiatan**, sehingga penggunaan dana dapat disesuaikan dengan perencanaan.
+
+Dengan adanya KasKita, diharapkan organisasi mahasiswa dapat mengelola keuangannya secara lebih **efisien, transparan, akurat, dan profesional**, sekaligus memanfaatkan teknologi untuk meningkatkan kualitas administrasi organisasi.
+
+## 3. Buat Poster Infografis aplikasi yang telah dibuat dalam 1 halaman.
+
+<img width="1600" height="2300" alt="Poster_Infografis_KasKita_Revisi" src="https://github.com/user-attachments/assets/e4e3ab0e-cf68-4bf0-ab02-9813c0a6a9b5" />
+
+
+<img width="240" height="320" alt="image" src="https://github.com/user-attachments/assets/0b9e3134-4ec8-4707-ba1c-fa936343ff86" />
+
+
+
 # Laporan Personal ETS: Aplikasi KasKita
 
 ## 1. Deskripsi Singkat
@@ -18,20 +68,13 @@ Fitur utama KasKita meliputi:
 
 Dengan fitur-fitur tersebut, KasKita diharapkan dapat membuat pengelolaan keuangan organisasi menjadi lebih terstruktur, mudah ditelusuri, dan transparan.
 
-Link Repository: https://github.com/Miko-a/KasKita
-Link Demo: https://youtu.be/mV4gYxfGaKI
+- Link Repository: https://github.com/Miko-a/KasKita
+- Link Demo: https://youtu.be/mV4gYxfGaKI
+- Link PRD: https://docs.google.com/document/d/104-ydLPS9vUFL73pSE94ZDUV3hY2efUM/edit?usp=sharing&ouid=112422738255319447217&rtpof=true&sd=true
 
 ## 2. Kontribusi Personal
 
-Pada bagian ini, kontribusi dijelaskan berdasarkan pekerjaan yang benar-benar dilakukan selama pengembangan aplikasi.
-
-**Peran dalam kelompok:** 
-
-**Implementasi yang dikerjakan:** 
-
-**Kendala dan penyelesaian:** 
-
-**Kolaborasi:** 
+Kami mengerjakan proyek ini bersama-sama.
 
 ## 3. Tampilan Aplikasi
 
