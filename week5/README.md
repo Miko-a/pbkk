@@ -183,10 +183,3 @@ Setelah penghapusan selesai, data tersebut tidak lagi ditampilkan pada daftar.
 - Delete hanya dapat dilakukan setelah data dipilih dan dikonfirmasi.
 - Data disimpan sementara di memori menggunakan `ObservableCollection`. Oleh karena itu, data akan kembali kosong ketika program ditutup.
 
-## Lisensi
-
-<<<<<<< HEAD
-Program ini dibuat untuk memenuhi tugas pembelajaran mata kuliah PBKK.
-=======
-Program ini dibuat untuk memenuhi tugas pembelajaran mata kuliah PBKK.
->>>>>>> 2b134ed7a34407cdd142eb28035034f817da9f85
